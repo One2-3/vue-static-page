@@ -19,19 +19,19 @@
       </div>
 
       <!-- 연등 (lanterns) -->
-      <div
-        v-if="showLanterns"
-        v-for="lantern in lanterns"
-        :key="lantern.id"
-        class="lantern"
-        :style="lanternStyle(lantern)"
-        aria-hidden="true"
-      >
-        <div class="string"></div>
-        <div class="body"></div>
-        <div class="glow"></div>
-        <div class="tail"></div>
-      </div>
+      <template v-if="showLanterns">
+        <div
+          v-for="lantern in lanterns"
+          :key="lantern.id"
+          class="lantern"
+          :style="lanternStyle(lantern)"
+        >
+          <div class="string"></div>
+          <div class="body"></div>
+          <div class="glow"></div>
+          <div class="tail"></div>
+        </div>
+      </template>
     </div>
 
     <!-- 콘텐츠 -->
