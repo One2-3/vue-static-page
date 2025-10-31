@@ -86,7 +86,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, computed } from 'vue'
+import { ref } from 'vue'
 
 type Lantern = {
   id: number
@@ -151,13 +151,6 @@ async function copyWish() {
   }
 }
 
-const greeting = computed(() => {
-  const h = new Date().getHours()
-  if (h < 6) return '고요한 새벽'
-  if (h < 12) return '상쾌한 아침'
-  if (h < 18) return '따스한 오후'
-  return '은은한 밤'
-})
 </script>
 
 <style scoped>
